@@ -147,7 +147,9 @@ class ChooseCountrySettingsViewController: UIViewController, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! CountryTableViewCell
+        guard let cell = tableView.cellForRow(at: indexPath) as? CountryTableViewCell else{
+            return
+        }
         cell.checkImage = nil
     }
     
