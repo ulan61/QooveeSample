@@ -20,6 +20,20 @@ class ChooseCountrySettingsViewController: UIViewController, UITableViewDataSour
     var selectedIndexPath: IndexPath!
     var favoriteCountries = ["Россия", "Казахстан", "Узбекистан", "Китай"]
     
+    @IBOutlet weak var footerView: UIView! {
+        didSet{
+            let shadowSize : CGFloat = 16.0
+            let shadowPath = UIBezierPath(rect: CGRect(x: -shadowSize / 2,
+                                                       y: -shadowSize / 2,
+                                                       width: self.footerView.frame.size.width + shadowSize,
+                                                       height: self.footerView.frame.size.height + shadowSize))
+            self.footerView.layer.masksToBounds = false
+            self.footerView.layer.shadowColor = UIColor(red: 214.0/255, green: 224.0/255, blue: 231/255, alpha: 1).cgColor
+            self.footerView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+            self.footerView.layer.shadowOpacity = 0.3
+            self.footerView.layer.shadowPath = shadowPath.cgPath
+        }
+    }
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.dataSource = self

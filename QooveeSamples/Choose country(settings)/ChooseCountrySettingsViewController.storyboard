@@ -34,26 +34,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0M-7J-PcW">
-                                <rect key="frame" x="0.0" y="572" width="375" height="95"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-0j-0la">
-                                        <rect key="frame" x="20" y="20" width="335" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="3nz-0j-0la" firstAttribute="top" secondItem="t0M-7J-PcW" secondAttribute="top" constant="20" id="9Oi-Rw-G6Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="3nz-0j-0la" secondAttribute="trailing" constant="20" id="DP0-x3-GI3"/>
-                                    <constraint firstItem="3nz-0j-0la" firstAttribute="leading" secondItem="t0M-7J-PcW" secondAttribute="leading" constant="20" id="Pbx-UG-aAu"/>
-                                    <constraint firstAttribute="height" constant="95" id="R2M-Fh-N7Y"/>
-                                    <constraint firstAttribute="bottom" secondItem="3nz-0j-0la" secondAttribute="bottom" constant="25" id="xwg-8a-b5K"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-A1-MCH">
                                 <rect key="frame" x="0.0" y="70" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,6 +84,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0M-7J-PcW">
+                                <rect key="frame" x="0.0" y="572" width="375" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-0j-0la">
+                                        <rect key="frame" x="20" y="20" width="335" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3nz-0j-0la" firstAttribute="top" secondItem="t0M-7J-PcW" secondAttribute="top" constant="20" id="9Oi-Rw-G6Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="3nz-0j-0la" secondAttribute="trailing" constant="20" id="DP0-x3-GI3"/>
+                                    <constraint firstItem="3nz-0j-0la" firstAttribute="leading" secondItem="t0M-7J-PcW" secondAttribute="leading" constant="20" id="Pbx-UG-aAu"/>
+                                    <constraint firstAttribute="height" constant="95" id="R2M-Fh-N7Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="3nz-0j-0la" secondAttribute="bottom" constant="25" id="xwg-8a-b5K"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -124,6 +124,7 @@
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="3nz-0j-0la" id="nn5-SP-aeS"/>
+                        <outlet property="footerView" destination="t0M-7J-PcW" id="DOI-ue-hv9"/>
                         <outlet property="searchTextField" destination="LRT-3f-aZ7" id="Uew-Yz-R0B"/>
                         <outlet property="tableView" destination="Nen-A1-MCH" id="ZS6-Cq-8ki"/>
                     </connections>
