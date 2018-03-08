@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F30F65D92050B7A900054620 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F65D82050B7A900054620 /* Country.swift */; };
+		F30F65DB2050BDE700054620 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F65DA2050BDE700054620 /* Colors.swift */; };
+		F356098420516C3B00F9EF04 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356098320516C3B00F9EF04 /* Extensions.swift */; };
+		F389B12E204ECAB500E56962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B12D204ECAB500E56962 /* AppDelegate.swift */; };
+		F389B130204ECAB500E56962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B12F204ECAB500E56962 /* ViewController.swift */; };
+		F389B133204ECAB500E56962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F389B131204ECAB500E56962 /* Main.storyboard */; };
+		F389B135204ECAB500E56962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F389B134204ECAB500E56962 /* Assets.xcassets */; };
+		F389B138204ECAB500E56962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F389B136204ECAB500E56962 /* LaunchScreen.storyboard */; };
+		F3A582D92050348A00122975 /* ChooseCountrySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A582D82050348A00122975 /* ChooseCountrySettingsViewController.swift */; };
+		F3A582DB205034B600122975 /* ChooseCountrySettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A582DA205034B600122975 /* ChooseCountrySettingsViewController.storyboard */; };
+		F3A582DE20503E6A00122975 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A582DD20503E6A00122975 /* CountryTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F30F65D82050B7A900054620 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		F30F65DA2050BDE700054620 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F356098320516C3B00F9EF04 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F389B12A204ECAB500E56962 /* QooveeSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QooveeSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F389B12D204ECAB500E56962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F389B12F204ECAB500E56962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F389B132204ECAB500E56962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F389B134204ECAB500E56962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F389B137204ECAB500E56962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F389B139204ECAB500E56962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3A582D82050348A00122975 /* ChooseCountrySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountrySettingsViewController.swift; sourceTree = "<group>"; };
+		F3A582DA205034B600122975 /* ChooseCountrySettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseCountrySettingsViewController.storyboard; sourceTree = "<group>"; };
+		F3A582DD20503E6A00122975 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F389B127204ECAB500E56962 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F30F65D72050B79800054620 /* Country model */ = {
+			isa = PBXGroup;
+			children = (
+				F30F65D82050B7A900054620 /* Country.swift */,
+			);
+			path = "Country model";
+			sourceTree = "<group>";
+		};
+		F30F65DC2050BDED00054620 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F30F65DA2050BDE700054620 /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F356098220516C2500F9EF04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F356098320516C3B00F9EF04 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F389B121204ECAB500E56962 = {
+			isa = PBXGroup;
+			children = (
+				F389B12C204ECAB500E56962 /* QooveeSamples */,
+				F389B12B204ECAB500E56962 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F389B12B204ECAB500E56962 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F389B12A204ECAB500E56962 /* QooveeSamples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F389B12C204ECAB500E56962 /* QooveeSamples */ = {
+			isa = PBXGroup;
+			children = (
+				F3A582D72050345F00122975 /* Choose country(settings) */,
+				F389B12D204ECAB500E56962 /* AppDelegate.swift */,
+				F389B12F204ECAB500E56962 /* ViewController.swift */,
+				F389B131204ECAB500E56962 /* Main.storyboard */,
+				F389B134204ECAB500E56962 /* Assets.xcassets */,
+				F389B136204ECAB500E56962 /* LaunchScreen.storyboard */,
+				F389B139204ECAB500E56962 /* Info.plist */,
+				F30F65DC2050BDED00054620 /* Constants */,
+				F356098220516C2500F9EF04 /* Extensions */,
+			);
+			path = QooveeSamples;
+			sourceTree = "<group>";
+		};
+		F3A582D72050345F00122975 /* Choose country(settings) */ = {
+			isa = PBXGroup;
+			children = (
+				F30F65D72050B79800054620 /* Country model */,
+				F3A582DC20503E4F00122975 /* Views */,
+				F3A582D82050348A00122975 /* ChooseCountrySettingsViewController.swift */,
+				F3A582DA205034B600122975 /* ChooseCountrySettingsViewController.storyboard */,
+			);
+			path = "Choose country(settings)";
+			sourceTree = "<group>";
+		};
+		F3A582DC20503E4F00122975 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3A582DD20503E6A00122975 /* CountryTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F389B129204ECAB500E56962 /* QooveeSamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F389B13C204ECAB500E56962 /* Build configuration list for PBXNativeTarget "QooveeSamples" */;
+			buildPhases = (
+				F389B126204ECAB500E56962 /* Sources */,
+				F389B127204ECAB500E56962 /* Frameworks */,
+				F389B128204ECAB500E56962 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QooveeSamples;
+			productName = QooveeSamples;
+			productReference = F389B12A204ECAB500E56962 /* QooveeSamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F389B122204ECAB500E56962 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ulan Nurmamatov";
+				TargetAttributes = {
+					F389B129204ECAB500E56962 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F389B125204ECAB500E56962 /* Build configuration list for PBXProject "QooveeSamples" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F389B121204ECAB500E56962;
+			productRefGroup = F389B12B204ECAB500E56962 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F389B129204ECAB500E56962 /* QooveeSamples */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F389B128204ECAB500E56962 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F389B138204ECAB500E56962 /* LaunchScreen.storyboard in Resources */,
+				F389B135204ECAB500E56962 /* Assets.xcassets in Resources */,
+				F3A582DB205034B600122975 /* ChooseCountrySettingsViewController.storyboard in Resources */,
+				F389B133204ECAB500E56962 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F389B126204ECAB500E56962 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A582DE20503E6A00122975 /* CountryTableViewCell.swift in Sources */,
+				F30F65DB2050BDE700054620 /* Colors.swift in Sources */,
+				F389B130204ECAB500E56962 /* ViewController.swift in Sources */,
+				F3A582D92050348A00122975 /* ChooseCountrySettingsViewController.swift in Sources */,
+				F30F65D92050B7A900054620 /* Country.swift in Sources */,
+				F389B12E204ECAB500E56962 /* AppDelegate.swift in Sources */,
+				F356098420516C3B00F9EF04 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F389B131204ECAB500E56962 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F389B132204ECAB500E56962 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F389B136204ECAB500E56962 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F389B137204ECAB500E56962 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F389B13A204ECAB500E56962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F389B13B204ECAB500E56962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F389B13D204ECAB500E56962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GR23PPY338;
+				INFOPLIST_FILE = QooveeSamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.learning.QooveeSamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F389B13E204ECAB500E56962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GR23PPY338;
+				INFOPLIST_FILE = QooveeSamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.learning.QooveeSamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F389B125204ECAB500E56962 /* Build configuration list for PBXProject "QooveeSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F389B13A204ECAB500E56962 /* Debug */,
+				F389B13B204ECAB500E56962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F389B13C204ECAB500E56962 /* Build configuration list for PBXNativeTarget "QooveeSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F389B13D204ECAB500E56962 /* Debug */,
+				F389B13E204ECAB500E56962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F389B122204ECAB500E56962 /* Project object */;
+}
