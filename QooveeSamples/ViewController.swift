@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func chooseService(_ sender: UIButton){
-        self.navigationController?.pushViewController(ChooseServiceViewController.storyboardInstance()!, animated: true)
+        self.navigationController?.pushViewController(ChooseServiceViewController(), animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

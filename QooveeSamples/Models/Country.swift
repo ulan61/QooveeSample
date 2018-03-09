@@ -15,10 +15,12 @@ class Country  {
     var firstLetter: String{
         return String(self.name[self.name.startIndex]).uppercased()
     }
+    
     init(name: String, emojiFlag:String) {
         self.name = name
         self.emojiFlag = emojiFlag
     }
+    
     convenience init(name: String, emojiFlag: String, phoneNumberCode: String) {
         self.init(name: name, emojiFlag: emojiFlag)
         self.phoneNumberCode = phoneNumberCode

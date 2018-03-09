@@ -7,83 +7,68 @@
 //
 
 import UIKit
+import PinLayout
 
 class ChooseServiceViewController: UIViewController {
-    static func storyboardInstance() -> UIViewController?{
-        let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController()
-        return viewController
-    }
+    private var headerView: GradientHeaderView!
+    private var marketView: GradientButtonView!
+    private var tenderView: GradientButtonView!
+    private var serviceView: GradientButtonView!
     
-    @IBOutlet private weak var headerView: UIView!{
-        didSet{
-            let colors = [UIColor(red: 0, green: 57.0/255, blue: 164.0/255, alpha: 1).cgColor,
-                          UIColor(red: 0, green: 111.0/255, blue: 210.0/255, alpha: 1).cgColor,
-                          UIColor(red: 0, green: 155.0/255, blue: 248.0/255, alpha: 1).cgColor]
-            setup(view: headerView, with: colors)
-        }
-    }
     
-    @IBOutlet private weak var marketView: UIView!{
-        didSet{
-            let colors = [UIColor(red: 0, green: 202.0/255, blue: 196.0/255, alpha: 1).cgColor,
-                          UIColor(red: 114.0/255, green: 229.0/255, blue: 182.0/255, alpha: 1).cgColor,
-                          UIColor(red: 180.0/255, green: 245.0/255, blue: 174.0/255, alpha: 1).cgColor]
-            setup(view: marketView, with: colors)
-            addShadow(to: marketView)
-        }
-    }
-    
-    @IBOutlet private weak var tenderView: UIView! {
-        didSet{
-            let colors = [UIColor(red: 1, green: 89.0/255, blue: 80.0/255, alpha: 1).cgColor,
-                          UIColor(red: 254.0/255, green: 193.0/255, blue: 59.0/255, alpha: 1).cgColor]
-            setup(view: tenderView, with: colors)
-            addShadow(to: tenderView)
-        }
-    }
-    
-    @IBOutlet private weak var serviceView: UIView!{
-        didSet{
-            let colors = [UIColor(red: 57.0/255, green: 25.0/255, blue: 144.0/255, alpha: 1).cgColor,
-                          UIColor(red: 229.0/255, green: 107.0/255, blue: 175.0/255, alpha: 1).cgColor]
-            setup(view: serviceView, with: colors)
-            addShadow(to: serviceView)
-        }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        headerView.pin.left(0).top(0).right(0).width(self.view.bounds.width).aspectRatio(1.4)
+        marketView.pin.below(of: headerView).marginTop(30).left(20).right(20).aspectRatio(3.35)
+        tenderView.pin.below(of: [headerView, marketView]).marginTop(20).left(20).right(20).aspectRatio(3.35)
+        serviceView.pin.below(of: [headerView, marketView, tenderView]).marginTop(20).left(20).right(20).aspectRatio(3.35)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.statusBarStyle = .lightContent
+        setupHeaderView()
+        setupMarketView()
+        setupTenderView()
+        setupServiceView()
+
         self.navigationController?.navigationBar.isHidden = true
         self.view.backgroundColor = UIColor(red: 247.0/255, green: 249.0/255, blue: 252.0/255, alpha: 1)
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
-    func setup(view: UIView, with colors: [CGColor]) {
-        addGradient(to: view, colors: colors)
+    private func setupHeaderView() {
+        let colors = [UIColor(red: 0, green: 57.0/255, blue: 164.0/255, alpha: 1).cgColor,
+                      UIColor(red: 0, green: 111.0/255, blue: 210.0/255, alpha: 1).cgColor,
+                      UIColor(red: 0, green: 155.0/255, blue: 248.0/255, alpha: 1).cgColor]
+        headerView = GradientHeaderView(frame: CGRect(x: 0, y: 0, width: 375, height: 267),
+                                            colors: colors,
+                                            title: "Добро пожаловать",
+                                            detail: "Выберите сервис")
+        self.view.addSubview(headerView)
+        
+        
     }
     
-    func addGradient(to view: UIView, colors: [CGColor]) {
-        let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-        gradient.zPosition = -1
-        gradient.colors = colors
-        gradient.cornerRadius = 15
-        view.layer.addSublayer(gradient)
+    private func setupMarketView() {
+        let colors = [UIColor(red: 0, green: 202.0/255, blue: 196.0/255, alpha: 1).cgColor,
+                      UIColor(red: 114.0/255, green: 229.0/255, blue: 182.0/255, alpha: 1).cgColor,
+                      UIColor(red: 180.0/255, green: 245.0/255, blue: 174.0/255, alpha: 1).cgColor]
+        marketView = GradientButtonView(frame: CGRect(x: 0, y: 0, width: 335, height: 100), colors: colors, buttonImage: #imageLiteral(resourceName: "marketIcon"), buttonTitle: "Маркет")
+        self.view.addSubview(marketView)
     }
     
-    func addShadow(to view: UIView) {
-        let shadowSize : CGFloat = 16.0
-        let shadowPath = UIBezierPath(rect: CGRect(x: -shadowSize / 2,
-                                                   y: -shadowSize / 2,
-                                                   width: view.frame.size.width + shadowSize,
-                                                   height: view.frame.size.height + shadowSize))
-        view.layer.masksToBounds = false
-        view.layer.shadowColor = UIColor(red: 214.0/255, green: 224.0/255, blue: 231/255, alpha: 1).cgColor
-        view.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        view.layer.shadowOpacity = 0.3
-        view.layer.shadowPath = shadowPath.cgPath
+    private func setupTenderView() {
+        let colors = [UIColor(red: 1, green: 89.0/255, blue: 80.0/255, alpha: 1).cgColor,
+                      UIColor(red: 254.0/255, green: 193.0/255, blue: 59.0/255, alpha: 1).cgColor]
+        tenderView = GradientButtonView(frame: CGRect(x: 0, y: 0, width: 335, height: 100), colors: colors, buttonImage: #imageLiteral(resourceName: "tendersIcon"), buttonTitle: "Тендеры")
+        self.view.addSubview(tenderView)
     }
+    
+    private func setupServiceView() {
+        let colors = [UIColor(red: 57.0/255, green: 25.0/255, blue: 144.0/255, alpha: 1).cgColor,
+                      UIColor(red: 229.0/255, green: 107.0/255, blue: 175.0/255, alpha: 1).cgColor]
+        serviceView = GradientButtonView(frame: CGRect(x: 0, y: 0, width: 335, height: 100), colors: colors, buttonImage: #imageLiteral(resourceName: "servicesIcon"), buttonTitle: "Сервисы")
+        self.view.addSubview(serviceView)
+    }
+    
 }
