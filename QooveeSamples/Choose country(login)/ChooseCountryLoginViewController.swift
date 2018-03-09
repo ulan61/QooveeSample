@@ -35,6 +35,7 @@ class ChooseCountryLoginViewController: UIViewController, UITableViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
         let countries = getCountries()
         let firstLetters = countries.map { $0.firstLetter }
         let uniqueFirstLetters = Array(Set(firstLetters))
