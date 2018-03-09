@@ -11,7 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func chooseCountryLogin(_ sender: UIButton){
-        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+        self.navigationController?.pushViewController(ChooseCountryLoginViewController.storyboardInstance()!, animated: true)
     }
     
     @IBAction func chooseCountrySettings(_ sender: UIButton){

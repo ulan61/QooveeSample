@@ -22,6 +22,12 @@ class CountryTableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var phoneNumberCodeLabel: UILabel!{
+        didSet{
+            phoneNumberCodeLabel.textColor = UIColor(red: 0, green: 147.0/255, blue: 243.0/255, alpha: 1)
+        }
+    }
+    
     var checkImage: UIImage!{
         didSet{
             if checkImage == nil {
@@ -35,7 +41,6 @@ class CountryTableViewCell: UITableViewCell {
             checkImageView.image = checkImage
         }
     }
-    
     
     
     override func awakeFromNib() {

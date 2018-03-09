@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F30F65D92050B7A900054620 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F65D82050B7A900054620 /* Country.swift */; };
 		F30F65DB2050BDE700054620 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F65DA2050BDE700054620 /* Colors.swift */; };
+		F3218FE32051F8E30026837C /* ChooseCountryLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3218FE22051F8E30026837C /* ChooseCountryLoginViewController.swift */; };
+		F3218FE52051F9030026837C /* ChooseCountryLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3218FE42051F9030026837C /* ChooseCountryLoginViewController.storyboard */; };
 		F356098420516C3B00F9EF04 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356098320516C3B00F9EF04 /* Extensions.swift */; };
 		F389B12E204ECAB500E56962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B12D204ECAB500E56962 /* AppDelegate.swift */; };
 		F389B130204ECAB500E56962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B12F204ECAB500E56962 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		F30F65D82050B7A900054620 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		F30F65DA2050BDE700054620 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F3218FE22051F8E30026837C /* ChooseCountryLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryLoginViewController.swift; sourceTree = "<group>"; };
+		F3218FE42051F9030026837C /* ChooseCountryLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseCountryLoginViewController.storyboard; sourceTree = "<group>"; };
 		F356098320516C3B00F9EF04 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F389B12A204ECAB500E56962 /* QooveeSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QooveeSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F389B12D204ECAB500E56962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +51,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F30F65D72050B79800054620 /* Country model */ = {
+		F30F65D72050B79800054620 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F30F65D82050B7A900054620 /* Country.swift */,
 			);
-			path = "Country model";
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F30F65DC2050BDED00054620 /* Constants */ = {
@@ -61,6 +65,15 @@
 				F30F65DA2050BDE700054620 /* Colors.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		F3218FE12051F85E0026837C /* Choose country(login) */ = {
+			isa = PBXGroup;
+			children = (
+				F3218FE22051F8E30026837C /* ChooseCountryLoginViewController.swift */,
+				F3218FE42051F9030026837C /* ChooseCountryLoginViewController.storyboard */,
+			);
+			path = "Choose country(login)";
 			sourceTree = "<group>";
 		};
 		F356098220516C2500F9EF04 /* Extensions */ = {
@@ -90,6 +103,8 @@
 		F389B12C204ECAB500E56962 /* QooveeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				F30F65D72050B79800054620 /* Models */,
+				F3218FE12051F85E0026837C /* Choose country(login) */,
 				F3A582D72050345F00122975 /* Choose country(settings) */,
 				F389B12D204ECAB500E56962 /* AppDelegate.swift */,
 				F389B12F204ECAB500E56962 /* ViewController.swift */,
@@ -106,7 +121,6 @@
 		F3A582D72050345F00122975 /* Choose country(settings) */ = {
 			isa = PBXGroup;
 			children = (
-				F30F65D72050B79800054620 /* Country model */,
 				F3A582DC20503E4F00122975 /* Views */,
 				F3A582D82050348A00122975 /* ChooseCountrySettingsViewController.swift */,
 				F3A582DA205034B600122975 /* ChooseCountrySettingsViewController.storyboard */,
@@ -183,6 +197,7 @@
 			files = (
 				F389B138204ECAB500E56962 /* LaunchScreen.storyboard in Resources */,
 				F389B135204ECAB500E56962 /* Assets.xcassets in Resources */,
+				F3218FE52051F9030026837C /* ChooseCountryLoginViewController.storyboard in Resources */,
 				F3A582DB205034B600122975 /* ChooseCountrySettingsViewController.storyboard in Resources */,
 				F389B133204ECAB500E56962 /* Main.storyboard in Resources */,
 			);
@@ -201,6 +216,7 @@
 				F3A582D92050348A00122975 /* ChooseCountrySettingsViewController.swift in Sources */,
 				F30F65D92050B7A900054620 /* Country.swift in Sources */,
 				F389B12E204ECAB500E56962 /* AppDelegate.swift in Sources */,
+				F3218FE32051F8E30026837C /* ChooseCountryLoginViewController.swift in Sources */,
 				F356098420516C3B00F9EF04 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
