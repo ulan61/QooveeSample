@@ -14,14 +14,14 @@ class ViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
-        self.navigationController?.pushViewController(ChooseCountryLoginViewController.storyboardInstance()!, animated: true)
+        self.navigationController?.pushViewController(ChooseCountryViewController(), animated: true)
     }
     
     @IBAction func chooseCountrySettings(_ sender: UIButton){
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        navigationItem.backBarButtonItem = backItem
-        self.navigationController?.pushViewController(ChooseCountrySettingsViewController.storyboardInstance()!, animated: true)
+//        let backItem = UIBarButtonItem()
+//        backItem.title = ""
+//        navigationItem.backBarButtonItem = backItem
+//        self.navigationController?.pushViewController(ChooseCountryViewController(), animated: true)
     }
 
     

@@ -10,20 +10,19 @@
 		1611E7942EAFC458C915E459 /* Pods_QooveeSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FBAE6C6D86CAC7F38C5F14 /* Pods_QooveeSamples.framework */; };
 		F30F65D92050B7A900054620 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F65D82050B7A900054620 /* Country.swift */; };
 		F30F65DB2050BDE700054620 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F65DA2050BDE700054620 /* Colors.swift */; };
-		F3218FE32051F8E30026837C /* ChooseCountryLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3218FE22051F8E30026837C /* ChooseCountryLoginViewController.swift */; };
-		F3218FE52051F9030026837C /* ChooseCountryLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3218FE42051F9030026837C /* ChooseCountryLoginViewController.storyboard */; };
+		F3218FE32051F8E30026837C /* ChooseCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3218FE22051F8E30026837C /* ChooseCountryViewController.swift */; };
 		F3218FE820520C130026837C /* ChooseServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3218FE720520C130026837C /* ChooseServiceViewController.swift */; };
 		F337D8212053185B00B87DD5 /* GradientButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F337D8202053185B00B87DD5 /* GradientButtonView.swift */; };
 		F337D8232053243E00B87DD5 /* GradientHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F337D8222053243E00B87DD5 /* GradientHeaderView.swift */; };
 		F356098420516C3B00F9EF04 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356098320516C3B00F9EF04 /* Extensions.swift */; };
+		F35DF71220542552006AE0F5 /* CountryUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DF71120542552006AE0F5 /* CountryUtil.swift */; };
+		F35DF71420543122006AE0F5 /* CountryLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DF71320543122006AE0F5 /* CountryLoginTableViewCell.swift */; };
 		F389B12E204ECAB500E56962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B12D204ECAB500E56962 /* AppDelegate.swift */; };
 		F389B130204ECAB500E56962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B12F204ECAB500E56962 /* ViewController.swift */; };
 		F389B133204ECAB500E56962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F389B131204ECAB500E56962 /* Main.storyboard */; };
 		F389B135204ECAB500E56962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F389B134204ECAB500E56962 /* Assets.xcassets */; };
 		F389B138204ECAB500E56962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F389B136204ECAB500E56962 /* LaunchScreen.storyboard */; };
-		F3A582D92050348A00122975 /* ChooseCountrySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A582D82050348A00122975 /* ChooseCountrySettingsViewController.swift */; };
-		F3A582DB205034B600122975 /* ChooseCountrySettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A582DA205034B600122975 /* ChooseCountrySettingsViewController.storyboard */; };
-		F3A582DE20503E6A00122975 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A582DD20503E6A00122975 /* CountryTableViewCell.swift */; };
+		F3A582DE20503E6A00122975 /* CountryBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A582DD20503E6A00122975 /* CountryBaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +31,13 @@
 		D7FBAE6C6D86CAC7F38C5F14 /* Pods_QooveeSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QooveeSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30F65D82050B7A900054620 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		F30F65DA2050BDE700054620 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		F3218FE22051F8E30026837C /* ChooseCountryLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryLoginViewController.swift; sourceTree = "<group>"; };
-		F3218FE42051F9030026837C /* ChooseCountryLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseCountryLoginViewController.storyboard; sourceTree = "<group>"; };
+		F3218FE22051F8E30026837C /* ChooseCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryViewController.swift; sourceTree = "<group>"; };
 		F3218FE720520C130026837C /* ChooseServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseServiceViewController.swift; sourceTree = "<group>"; };
 		F337D8202053185B00B87DD5 /* GradientButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonView.swift; sourceTree = "<group>"; };
 		F337D8222053243E00B87DD5 /* GradientHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientHeaderView.swift; sourceTree = "<group>"; };
 		F356098320516C3B00F9EF04 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F35DF71120542552006AE0F5 /* CountryUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryUtil.swift; sourceTree = "<group>"; };
+		F35DF71320543122006AE0F5 /* CountryLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryLoginTableViewCell.swift; sourceTree = "<group>"; };
 		F389B12A204ECAB500E56962 /* QooveeSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QooveeSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F389B12D204ECAB500E56962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F389B12F204ECAB500E56962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,9 +45,7 @@
 		F389B134204ECAB500E56962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F389B137204ECAB500E56962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F389B139204ECAB500E56962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3A582D82050348A00122975 /* ChooseCountrySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountrySettingsViewController.swift; sourceTree = "<group>"; };
-		F3A582DA205034B600122975 /* ChooseCountrySettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseCountrySettingsViewController.storyboard; sourceTree = "<group>"; };
-		F3A582DD20503E6A00122975 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		F3A582DD20503E6A00122975 /* CountryBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryBaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +96,7 @@
 		F3218FE12051F85E0026837C /* Choose country(login) */ = {
 			isa = PBXGroup;
 			children = (
-				F3218FE22051F8E30026837C /* ChooseCountryLoginViewController.swift */,
-				F3218FE42051F9030026837C /* ChooseCountryLoginViewController.storyboard */,
+				F3218FE22051F8E30026837C /* ChooseCountryViewController.swift */,
 			);
 			path = "Choose country(login)";
 			sourceTree = "<group>";
@@ -115,8 +112,10 @@
 		F337D81F2053183A00B87DD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F3A582DD20503E6A00122975 /* CountryBaseTableViewCell.swift */,
 				F337D8202053185B00B87DD5 /* GradientButtonView.swift */,
 				F337D8222053243E00B87DD5 /* GradientHeaderView.swift */,
+				F35DF71320543122006AE0F5 /* CountryLoginTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +126,14 @@
 				F356098320516C3B00F9EF04 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F35DF71020542544006AE0F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F35DF71120542552006AE0F5 /* CountryUtil.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F389B121204ECAB500E56962 = {
@@ -150,11 +157,11 @@
 		F389B12C204ECAB500E56962 /* QooveeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				F35DF71020542544006AE0F5 /* Utils */,
 				F30F65D72050B79800054620 /* Models */,
 				F337D81F2053183A00B87DD5 /* Views */,
 				F3218FE620520BDC0026837C /* Choose Services */,
 				F3218FE12051F85E0026837C /* Choose country(login) */,
-				F3A582D72050345F00122975 /* Choose country(settings) */,
 				F389B12D204ECAB500E56962 /* AppDelegate.swift */,
 				F389B12F204ECAB500E56962 /* ViewController.swift */,
 				F389B131204ECAB500E56962 /* Main.storyboard */,
@@ -165,24 +172,6 @@
 				F356098220516C2500F9EF04 /* Extensions */,
 			);
 			path = QooveeSamples;
-			sourceTree = "<group>";
-		};
-		F3A582D72050345F00122975 /* Choose country(settings) */ = {
-			isa = PBXGroup;
-			children = (
-				F3A582DC20503E4F00122975 /* Views */,
-				F3A582D82050348A00122975 /* ChooseCountrySettingsViewController.swift */,
-				F3A582DA205034B600122975 /* ChooseCountrySettingsViewController.storyboard */,
-			);
-			path = "Choose country(settings)";
-			sourceTree = "<group>";
-		};
-		F3A582DC20503E4F00122975 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F3A582DD20503E6A00122975 /* CountryTableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +238,6 @@
 			files = (
 				F389B138204ECAB500E56962 /* LaunchScreen.storyboard in Resources */,
 				F389B135204ECAB500E56962 /* Assets.xcassets in Resources */,
-				F3218FE52051F9030026837C /* ChooseCountryLoginViewController.storyboard in Resources */,
-				F3A582DB205034B600122975 /* ChooseCountrySettingsViewController.storyboard in Resources */,
 				F389B133204ECAB500E56962 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,15 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A582DE20503E6A00122975 /* CountryTableViewCell.swift in Sources */,
+				F3A582DE20503E6A00122975 /* CountryBaseTableViewCell.swift in Sources */,
 				F3218FE820520C130026837C /* ChooseServiceViewController.swift in Sources */,
+				F35DF71420543122006AE0F5 /* CountryLoginTableViewCell.swift in Sources */,
 				F30F65DB2050BDE700054620 /* Colors.swift in Sources */,
 				F389B130204ECAB500E56962 /* ViewController.swift in Sources */,
-				F3A582D92050348A00122975 /* ChooseCountrySettingsViewController.swift in Sources */,
 				F337D8212053185B00B87DD5 /* GradientButtonView.swift in Sources */,
+				F35DF71220542552006AE0F5 /* CountryUtil.swift in Sources */,
 				F30F65D92050B7A900054620 /* Country.swift in Sources */,
 				F389B12E204ECAB500E56962 /* AppDelegate.swift in Sources */,
-				F3218FE32051F8E30026837C /* ChooseCountryLoginViewController.swift in Sources */,
+				F3218FE32051F8E30026837C /* ChooseCountryViewController.swift in Sources */,
 				F356098420516C3B00F9EF04 /* Extensions.swift in Sources */,
 				F337D8232053243E00B87DD5 /* GradientHeaderView.swift in Sources */,
 			);

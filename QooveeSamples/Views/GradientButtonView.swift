@@ -21,7 +21,7 @@ class GradientButtonView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         imageView.pin.top(20).left(60).bottom(20).aspectRatio()
-        label.pin.after(of: imageView).marginLeft(17.3).vCenter()
+        label.pin.after(of: imageView).marginLeft(17.3).vCenter().right(87).aspectRatio(124.0/34.0)
         addGradient(colors: colors, cornerRadius: 15)
     }
     

@@ -44,9 +44,17 @@ class ChooseServiceViewController: UIViewController {
                                             colors: colors,
                                             title: "Добро пожаловать",
                                             detail: "Выберите сервис")
+        headerView.setBackButton(action: #selector(getBack), target: self)
+        headerView.setInfoButton(action: #selector(getInfo), target: self)
         self.view.addSubview(headerView)
-        
-        
+    }
+    
+    @objc private func getBack(){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func getInfo(){
+        print("Yeap")
     }
     
     private func setupMarketView() {

@@ -83,5 +83,12 @@ class GradientHeaderView: UIView {
         self.addSubview(infoButton)
     }
     
+    func setBackButton(action: Selector, target: Any?) {
+        backButton.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
+    func setInfoButton(action: Selector, target: Any?) {
+        infoButton.addTarget(target, action: action, for: .touchUpInside)
+    }
     
 }
