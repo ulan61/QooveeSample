@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import PinLayout
 
-class ChooseCountryViewController: UIViewController {
+class ChooseCountryBaseViewController: UIViewController {
     
-    private var tableView: UITableView!
+    internal var tableView: UITableView!
     private var searchTextField: UITextField!
     private var searchIconImageView: UIImageView!
     
@@ -18,41 +19,76 @@ class ChooseCountryViewController: UIViewController {
     private var countries: [[Country]]!
     private var firstLetters: [String]!
     private var favoriteCountries = [Country(name: "Russia", code: "RU"), Country(name: "Kazakhstan", code: "KZ"), Country(name: "Uzbekistan", code: "UZ"), Country(name: "China", code: "CN")]
+
+    private var reuseIdentifier: String!
+    
+    private var navBarHeight: CGFloat!{
+        return self.navigationController?.navigationBar.bounds.height
+    }
+    
+    private var statusBarHeight: CGFloat!{
+        return UIApplication.shared.statusBarFrame.height
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        searchIconImageView.pin.top(navBarHeight + statusBarHeight + 16).left(20).width(16).height(16)
+        searchTextField.pin.after(of: searchIconImageView).marginLeft(14).right(20).top(navBarHeight + statusBarHeight + 16)
+                           .width(self.view.bounds.width - 40).aspectRatio((self.view.bounds.width - 40)/18.0)
+        tableView.pin.below(of: [searchIconImageView,searchTextField]).marginTop(16).left(0).right(0).bottom(0)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
         countries = CountryUtil.shared.getSortedCountriesBySection().countries
         firstLetters = CountryUtil.shared.getSortedCountriesBySection().firstLetters
-        setupTableView()
+        setupSearchTextField()
+        setupSearchIcon()
         addGradientToBar()
         setBackImage()
         UIApplication.shared.statusBarStyle = .lightContent
         self.title = "Выбор страны"
+        self.view.backgroundColor = .white
     }
     
-    func setupTableView() {
-        tableView = UITableView(frame: view.frame)
+    internal func setupTableView(cellClass: AnyClass?, reuseIdentifier: String) {
+        self.reuseIdentifier = reuseIdentifier
+        tableView = UITableView(frame: CGRect(x: 0, y: 50, width: self.view.bounds.width, height: self.view.bounds.height - 50))
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CountryLoginTableViewCell.self, forCellReuseIdentifier: "countryLoginCell")
-        view.addSubview(tableView)
+        tableView.register(cellClass, forCellReuseIdentifier: reuseIdentifier)
+        self.view.addSubview(tableView)
     }
     
-    func addGradientToBar()  {
+    private func setupSearchIcon(){
+        searchIconImageView = UIImageView(frame: CGRect(x: 20, y: 17, width: 16, height: 16))
+        searchIconImageView.image = #imageLiteral(resourceName: "iconSearch")
+        self.view.addSubview(searchIconImageView)
+    }
+    
+    private func setupSearchTextField(){
+        searchTextField = UITextField(frame: CGRect(x: 20, y: 17, width: 98, height: 18))
+        searchTextField.placeholder = "Поиск страны"
+        searchTextField.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)
+        self.view.addSubview(searchTextField)
+    }
+    
+    private func addGradientToBar()  {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
         let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: 0, y: 0, width: UIApplication.shared.statusBarFrame.width, height: UIApplication.shared.statusBarFrame.height + self.navigationController!.navigationBar.frame.height)
+        gradient.frame = CGRect(x: 0, y: 0, width: UIApplication.shared.statusBarFrame.width, height: statusBarHeight + navBarHeight)
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5);
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5);
         gradient.colors = [Colors.gradientFirstColor.cgColor, Colors.gradientSecondColor.cgColor, Colors.gradientThirdColor.cgColor]
         self.view.layer.addSublayer(gradient)
     }
     
-    func setBackImage() {
+    private func setBackImage() {
         let backImage = UIImage(named: "back")
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
@@ -61,7 +97,7 @@ class ChooseCountryViewController: UIViewController {
     }
 }
 
-extension ChooseCountryViewController: UITableViewDataSource {
+extension ChooseCountryBaseViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return favoriteCountries.count
@@ -72,7 +108,7 @@ extension ChooseCountryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "countryLoginCell", for: indexPath) as! CountryLoginTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CountryBaseTableViewCell
         
         if indexPath.section == 0 {
             let country = favoriteCountries[indexPath.row]
@@ -91,8 +127,11 @@ extension ChooseCountryViewController: UITableViewDataSource {
     }
 }
 
-extension ChooseCountryViewController: UITableViewDelegate {
+extension ChooseCountryBaseViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
@@ -118,13 +157,5 @@ extension ChooseCountryViewController: UITableViewDelegate {
         headerView.addSubview(headerLabel)
         
         return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
     }
 }

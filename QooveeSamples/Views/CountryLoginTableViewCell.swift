@@ -10,6 +10,7 @@ import UIKit
 
 class CountryLoginTableViewCell: CountryBaseTableViewCell {
     private var phoneNumberCodeLabel: UILabel!
+    private var phoneNumberCode: String!
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -28,12 +29,17 @@ class CountryLoginTableViewCell: CountryBaseTableViewCell {
     private func setupPhoneNumberLabel(){
         phoneNumberCodeLabel = UILabel(frame: CGRect(x: 317, y: 96, width: 50, height: 25))
         phoneNumberCodeLabel.textColor = UIColor(red: 0, green: 147.0/255, blue: 243.0/255, alpha: 1)
+        phoneNumberCodeLabel.textAlignment = .right
         self.addSubview(phoneNumberCodeLabel)
     }
     
     override func initWith(country: Country) {
         super.initWith(country: country)
-        phoneNumberCodeLabel.text = country.getPhoneNumberCode()
+        phoneNumberCode = country.getPhoneNumberCode()
+    }
+    
+    func setPhoneNumberCode()  {
+        phoneNumberCodeLabel.text = phoneNumberCode
     }
     
 }

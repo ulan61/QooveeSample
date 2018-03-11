@@ -21,10 +21,6 @@ class Country  {
         return name
     }
     
-    func getEmojiFlag() -> String {
-        return getEmojiFlagCode()
-    }
-    
     func getPhoneNumberCode() -> String? {
         guard let callingCode = getCallingCode(countryRegionCode: code) else{
             return nil
@@ -36,7 +32,7 @@ class Country  {
         return String(self.name[self.name.startIndex]).uppercased()
     }
     
-    private func getEmojiFlagCode() -> String {
+    func getEmojiFlag() -> String {
         let base : UInt32 = 127397
         var s = ""
         for v in code.unicodeScalars {
